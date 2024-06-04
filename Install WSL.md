@@ -29,7 +29,13 @@
 打开安装好的 Ubuntu 22.04，上面会显示新的命名与设置密码，进行设置。配置好后就可以使用了。
 
 ## 换源
-与普通的 Ubuntu 相同，都是修改`/etc/apt/sources.list`文件。你可以使用 Linux 终端的文本编辑器进行修改，或者在 Windows 下的文件管理器定位到对应文件进行修改。具体内容参考[清华大学开源软件站的指导](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)。
+与普通的 Ubuntu 相同，都是修改`/etc/apt/sources.list`文件。你可以使用 Linux 终端的文本编辑器进行修改，或者在 Windows 下的文件管理器定位到对应文件进行修改。
+具体内容参考[清华大学开源软件站的指导](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)。
+
+编辑完成后，运行以下命令以更新软件列表。
+```
+sudo apt-get update
+```
 
 ## 设置访问USB设备
 
@@ -58,3 +64,6 @@
     usbipd attach --wsl --busid <busid>
     ```
     请注意，只要 USB 设备连接到 WSL，Windows 将无法使用它。
+
+
+## Visual Studio Code 连接 WSL
